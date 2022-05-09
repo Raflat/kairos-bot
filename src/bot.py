@@ -11,7 +11,8 @@ config.read(r"resources\config.ini")
 
 # Create driver for Chrome in headless mode, to prevent user inputs while running
 options = Options()
-options.headless = True
+options.add_argument('--headless')
+options.add_argument('--disable-gpu')
 driver = webdriver.Chrome(service=Service(config["DEFAULT"]["DriverPath"]), options=options)
 
 def click(xpath):
