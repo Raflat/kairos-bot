@@ -57,8 +57,8 @@ def main():
     click("//*[@id='oauth_btn']")
 
     # Log in to Kairos
-    write("//*[@id='username']", config["DEFAULT"]["Username"])
-    write("//*[@id='password']", config["DEFAULT"]["Password"])
+    write("//*[@id='username']", config["LOGIN"]["Username"])
+    write("//*[@id='password']", config["LOGIN"]["Password"])
     click("/html/body/div/div/div/div[1]/form/div[5]/button")
 
     # Open tab for new reservations
