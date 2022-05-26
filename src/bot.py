@@ -7,7 +7,7 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 
 
-# Load configuration from the .ini file
+# Load login information from the .ini file
 config = ConfigParser()
 config.read(r"resources\config.ini")
 
@@ -19,7 +19,7 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),  opt
 
 def click(xpath):
     """
-    Clicks on the interactables from the given list.
+    Clicks on the interactables with the provided XPath.
 
     Parameter:
         xpath (str): XPath of the interactables
@@ -44,14 +44,14 @@ def write(xpath, text):
 def main():
     """Main function"""
     # Set implicit wait to be sure that everything loads on the page
-    driver.implicitly_wait(3)
+    driver.implicitly_wait(1)
 
     # Load Kairos in the current session
     kairos_url = ("https://kairos.unifi.it/agendaweb/index.php?view="
                   "prenotalezione&include=prenotalezione_home&_lang=it")
     driver.get(kairos_url)
 
-    # Accept terms
+    # Accept terms of use
     click("//div[3]/div[2]/label/span[@class='slider round']")
     click("//div[4]/div[2]/label/span[@class='slider round']")
     click("//*[@id='oauth_btn']")
