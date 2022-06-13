@@ -6,7 +6,7 @@ At the moment, this bot is solely available for [Google Chrome](https://www.goog
 
 ## Setup
 1. Download the code.
-2. Set the fields "Username" and "Password" of the config.ini file to your Kairos' credentials.
+2. Set the fields "Username" and "Password" in the config.ini file to your Kairos credentials.
 
 ## Use
 Run the executable.
