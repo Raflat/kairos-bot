@@ -10,3 +10,6 @@ At the moment, this bot is solely available for [Google Chrome](https://www.goog
 
 ## Use
 Run the executable.
+
+## End of Support
+Since, as I'm writing this, the web agenda isn't used anymore, I'm no longer supporting this software.
